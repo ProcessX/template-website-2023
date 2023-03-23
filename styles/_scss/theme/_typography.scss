@@ -1,0 +1,151 @@
+@use "sass:math";
+/*FONT IMPORT*/
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Wendy+One&display=swap");
+
+/*FONT BASE*/
+$font-base-mobile: 20px;
+$font-base-laptop: 20px;
+
+/*FONT SCALES*/
+$font-scale-mobile: 1.19;
+$font-scale-laptop: 1.25;
+
+/*LINE HEIGHT*/
+$text-line-height: 1.5em;
+$heading-line-height: 1.2em;
+$button-line-height: 1em;
+
+html {
+  font-size: $font-base-mobile;
+  line-height: $text-line-height;
+  @apply font-text;
+}
+
+.text-c-xxs {
+  font-size: 1rem;
+}
+
+.text-c-xs {
+  font-size: 1rem;
+}
+
+.text-c-sm {
+  font-size: 1rem;
+}
+
+.text-c-base {
+  font-size: $font-base-mobile;
+}
+
+.text-c-md {
+  font-size: #{$font-scale-mobile}rem;
+}
+
+.text-c-lg {
+  font-size: #{math.pow($font-scale-mobile, 2)}rem;
+}
+
+.text-c-xl {
+  font-size: #{math.pow($font-scale-mobile, 3)}rem;
+}
+
+.text-c-2xl {
+  font-size: #{math.pow($font-scale-mobile, 4)}rem;
+}
+
+.text-c-3xl {
+  font-size: #{math.pow($font-scale-mobile, 5)}rem;
+}
+
+.text-c-4xl {
+  font-size: #{math.pow($font-scale-mobile, 6)}rem;
+}
+
+.text-c-5xl {
+  font-size: #{math.pow($font-scale-mobile, 7)}rem;
+}
+
+.text-c-6xl {
+  font-size: #{math.pow($font-scale-mobile, 8)}rem;
+}
+
+.text-c-7xl {
+  font-size: #{math.pow($font-scale-mobile, 9)}rem;
+}
+
+.text-c-8xl {
+  font-size: #{math.pow($font-scale-mobile, 10)}rem;
+}
+
+.text-c-9xl {
+  font-size: #{math.pow($font-scale-mobile, 11)}rem;
+}
+
+.heading {
+  line-height: $heading-line-height;
+  @apply font-heading;
+}
+
+/*BREAKPOINTS*/
+
+@media screen and (min-width: 1280px) {
+  .text-c-xxs {
+    font-size: 1rem;
+  }
+
+  .text-c-xs {
+    font-size: 1rem;
+  }
+
+  .text-c-sm {
+    font-size: 1rem;
+  }
+
+  .text-c-base {
+    font-size: $font-base-laptop;
+  }
+
+  .text-c-md {
+    font-size: #{$font-scale-laptop}rem;
+  }
+
+  .text-c-lg {
+    font-size: #{math.pow($font-scale-laptop, 2)}rem;
+  }
+
+  .text-c-xl {
+    font-size: #{math.pow($font-scale-laptop, 3)}rem;
+  }
+
+  .text-c-2xl {
+    font-size: #{math.pow($font-scale-laptop, 4)}rem;
+  }
+
+  .text-c-3xl {
+    font-size: #{math.pow($font-scale-laptop, 5)}rem;
+  }
+
+  .text-c-4xl {
+    font-size: #{math.pow($font-scale-laptop, 6)}rem;
+  }
+
+  .text-c-5xl {
+    font-size: #{math.pow($font-scale-laptop, 7)}rem;
+  }
+
+  .text-c-6xl {
+    font-size: #{math.pow($font-scale-laptop, 8)}rem;
+  }
+
+  .text-c-7xl {
+    font-size: #{math.pow($font-scale-laptop, 9)}rem;
+  }
+
+  .text-c-8xl {
+    font-size: #{math.pow($font-scale-laptop, 10)}rem;
+  }
+
+  .text-c-9xl {
+    font-size: #{math.pow($font-scale-laptop, 11)}rem;
+  }
+}

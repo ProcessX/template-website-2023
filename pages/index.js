@@ -1,9 +1,11 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import { Inter } from "next/font/google";
+import styles from "@/styles/Home.module.css";
+import ButtonPrimary from "@/components/buttons/button-primary/button-primary";
+import ButtonLink from "@/components/buttons/button-link/button-link";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -15,109 +17,61 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.js</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
+        <section className="hero bg-tertiary-50">
+          <div className="row">
+            <div className="col col--6">
+              <h1 className="text-c-3xl heading text-quaternary-500 mb-8 max-w-[30rem]">
+                Un mouvement de jeunesse{" "}
+                <span className="text-secondary-500">pour tous</span>
+              </h1>
+              <p className="text-c-base text-quaternary-200 mb-10 max-w-[28rem]">
+                Lorem ipsum dolor sit amet consectetur. A posuere tempus donec
+                scelerisque ornare. Nam in tempor id convallis. Platea ut
+                feugiat massa tempus malesuada.
+              </p>
+              <div className="button__container">
+                <ButtonPrimary />
+                <ButtonLink />
+              </div>
+            </div>
           </div>
-        </div>
-
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
+        </section>
+        <section className="main-informations">
+          <div className="row">
+            <div className="col col--10">
+              <h2 className="text-c-2xl heading text-quaternary-500">
+                Infos principales
+              </h2>
+            </div>
           </div>
-        </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
+        </section>
+        <section className="latest-news bg-tertiary-50">
+          <div className="row">
+            <div className="col">
+              <h2 className="text-c-2xl heading text-quaternary-500">
+                Communications
+              </h2>
+            </div>
+          </div>
+        </section>
+        <section className="latest-news">
+          <div className="row">
+            <div className="col">
+              <h2 className="text-c-2xl heading text-quaternary-500">
+                Viens nous rejoindre !
+              </h2>
+              <p className="text-c-base text-quaternary-200 mb-10 max-w-[28rem]">
+                Lorem ipsum dolor sit amet consectetur. A posuere tempus donec
+                scelerisque ornare. Nam in tempor id convallis. Platea ut
+                feugiat massa tempus malesuada.
+              </p>
+              <h4 className="text-c-md heading text-quaternary-500">
+                Le Patro, c'est...
+              </h4>
+            </div>
+          </div>
+        </section>
       </main>
     </>
-  )
+  );
 }

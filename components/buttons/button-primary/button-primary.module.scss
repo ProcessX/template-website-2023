@@ -1,0 +1,29 @@
+.button {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1em;
+  padding: calc(1em - 1px) 1.5em calc(1em + 1px) 1.5em;
+  box-sizing: content-box;
+  display: inline-block;
+  border-radius: 3em;
+  transition-property: transform;
+  color: white;
+  transition-duration: 0.3s;
+  background: rgb(242, 156, 119);
+  background: linear-gradient(
+    135deg,
+    rgba(242, 156, 119, 1) 0%,
+    rgba(242, 124, 116, 1) 100%
+  );
+  -webkit-box-shadow: 0px 8px 16px -8px #f29977;
+  box-shadow: 0px 8px 16px -8px #f29977;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.button.button--sm {
+  padding: calc(0.75em - 1px) 2.25em calc(0.75em + 1px) 2.25em;
+}
