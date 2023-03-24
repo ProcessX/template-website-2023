@@ -1,8 +1,8 @@
 $row-max-w-mobile: 480px;
 $row-max-w-tablet: 720px;
 $row-max-w-laptop: 800px;
-$row-max-w-desktop: 1280px;
-$row-max-w-fullhd: 1500px;
+$row-max-w-desktop: 1180px;
+$row-max-w-fullhd: 1440px;
 $row-max-w-retina: 1720px;
 
 $col-gap-mobile: 12px;
@@ -15,12 +15,11 @@ $col-gap-retina: 24px;
 $col-margin-mobile: 12px;
 $col-margin-tablet: 32px;
 $col-margin-laptop: 40px;
-$col-margin-desktop: 80px;
-$col-margin-fullhd: 120px;
-$col-margin-retina: 160px;
+$col-margin-desktop: 112px;
+$col-margin-fullhd: 160px;
+$col-margin-retina: 200px;
 
 .RowContainer {
-  background-color: red;
   display: grid;
   column-gap: $col-gap-mobile;
   $margin: calc(((100vw - $row-max-w-mobile) / 2) - $col-gap-mobile);
@@ -66,6 +65,10 @@ $col-margin-retina: 160px;
 @media screen and (min-width: 1560px) {
   .RowContainer {
     column-gap: $col-gap-fullhd;
+    $margin: calc(((100vw - $row-max-w-fullhd) / 2) - $col-gap-fullhd);
+    grid-template-columns:
+      minmax(($col-margin-fullhd - $col-gap-fullhd), $margin) repeat(12, 1fr)
+      minmax(($col-margin-fullhd - $col-gap-fullhd), $margin);
   }
 }
 
@@ -73,5 +76,9 @@ $col-margin-retina: 160px;
 @media screen and (min-width: 2000px) {
   .RowContainer {
     column-gap: $col-gap-retina;
+    $margin: calc(((100vw - $row-max-w-retina) / 2) - $col-gap-retina);
+    grid-template-columns:
+      minmax(($col-margin-retina - $col-gap-retina), $margin) repeat(12, 1fr)
+      minmax(($col-margin-retina - $col-gap-retina), $margin);
   }
 }

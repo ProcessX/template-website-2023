@@ -68,6 +68,9 @@ module.exports = {
         fullhd: "1560px",
         retina: "2000px",
       },
+      gridColumnEnd: {
+        '14': '14'
+      }
     },
   },
   plugins: [],

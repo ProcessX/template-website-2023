@@ -14,7 +14,7 @@ export default function Home() {
 
         <RowContainer>
           <div className="col-start-2 col-end-4 laptop:col-end-8 desktop:col-end-14">
-            <p className="">Container</p>
+            <p className="typo-3xl">Container</p>
           </div>
         </RowContainer>
       </main>
