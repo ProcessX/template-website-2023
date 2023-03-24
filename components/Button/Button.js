@@ -1,9 +1,8 @@
 import React from 'react'
-import styles from './Button.module.scss';
 
-function Button() {
+function Button({ label }) {
   return (
-    <a className={styles.Button}>Button</a>
+    <a className=' bg-primary-500 font-bold text-white leading-[1em] typo-base tracking-wide px-6 py-4 inline-block cursor-pointer rounded-full hover:bg-primary-700 transition-colors duration-200'>{label}</a>
   )
 }
 
