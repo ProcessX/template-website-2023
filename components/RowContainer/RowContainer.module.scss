@@ -1,0 +1,77 @@
+$row-max-w-mobile: 480px;
+$row-max-w-tablet: 720px;
+$row-max-w-laptop: 800px;
+$row-max-w-desktop: 1280px;
+$row-max-w-fullhd: 1500px;
+$row-max-w-retina: 1720px;
+
+$col-gap-mobile: 12px;
+$col-gap-tablet: 16px;
+$col-gap-laptop: 24px;
+$col-gap-desktop: 24px;
+$col-gap-fullhd: 24px;
+$col-gap-retina: 24px;
+
+$col-margin-mobile: 12px;
+$col-margin-tablet: 32px;
+$col-margin-laptop: 40px;
+$col-margin-desktop: 80px;
+$col-margin-fullhd: 120px;
+$col-margin-retina: 160px;
+
+.RowContainer {
+  background-color: red;
+  display: grid;
+  column-gap: $col-gap-mobile;
+  $margin: calc(((100vw - $row-max-w-mobile) / 2) - $col-gap-mobile);
+  grid-template-columns:
+    minmax(($col-margin-mobile - $col-gap-mobile), $margin) repeat(2, 1fr)
+    minmax(($col-margin-mobile - $col-gap-mobile), $margin);
+}
+
+//TABLET
+@media screen and (min-width: 640px) {
+  .RowContainer {
+    column-gap: $col-gap-tablet;
+    $margin: calc(((100vw - $row-max-w-tablet) / 2) - $col-gap-tablet);
+    grid-template-columns:
+      minmax(($col-margin-tablet - $col-gap-tablet), $margin) repeat(2, 1fr)
+      minmax(($col-margin-tablet - $col-gap-tablet), $margin);
+  }
+}
+
+//LAPTOP
+@media screen and (min-width: 1024px) {
+  .RowContainer {
+    column-gap: $col-gap-laptop;
+    $margin: calc(((100vw - $row-max-w-laptop) / 2) - $col-gap-laptop);
+    grid-template-columns:
+      minmax(($col-margin-laptop - $col-gap-laptop), $margin) repeat(6, 1fr)
+      minmax(($col-margin-laptop - $col-gap-laptop), $margin);
+  }
+}
+
+//DESKTOP
+@media screen and (min-width: 1280px) {
+  .RowContainer {
+    column-gap: $col-gap-desktop;
+    $margin: calc(((100vw - $row-max-w-desktop) / 2) - $col-gap-desktop);
+    grid-template-columns:
+      minmax(($col-margin-desktop - $col-gap-desktop), $margin) repeat(12, 1fr)
+      minmax(($col-margin-desktop - $col-gap-desktop), $margin);
+  }
+}
+
+//FULLHD
+@media screen and (min-width: 1560px) {
+  .RowContainer {
+    column-gap: $col-gap-fullhd;
+  }
+}
+
+//RETINA
+@media screen and (min-width: 2000px) {
+  .RowContainer {
+    column-gap: $col-gap-retina;
+  }
+}

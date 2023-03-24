@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         text: ['"Lato"', "sans-serif", "system-ui"],
-        heading: ['"Wendy One"', "sans-serif", "system-ui"],
+        heading: ['"Lato"', "sans-serif", "system-ui"],
       },
       colors: {
         primary: {
@@ -60,6 +60,13 @@ module.exports = {
           800: "#1A102D",
           900: "#110B1E",
         },
+      },
+      screens: {
+        tablet: "640px",
+        laptop: "1024px",
+        desktop: "1280px",
+        fullhd: "1560px",
+        retina: "2000px",
       },
     },
   },
